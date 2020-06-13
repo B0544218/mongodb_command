@@ -27,3 +27,5 @@
 #### (若沒有使用$set的指令指定更新哪個欄位 ，update指令會將整筆資料進行更動(沒加上的欄位就直接清掉了)，會造成資料遺失)
 - db.people.update( { "type" : "student"},{ "type" : "engineer"},{ multi:true} )
 - db.people.update( { "name": "alice" },{ $set : { age :30} })
+### import JSON
+- (在cmd下面輸入) mongoimport --jsonArray --db a_dbname --collection a_collectname --file C:\...\...\.json
