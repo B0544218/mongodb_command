@@ -1,5 +1,5 @@
 ## 切入mongodb環境
-- mongod
+- mongo
 ### 顯示目前操作的database
 - db
 ### 檢視資料庫
