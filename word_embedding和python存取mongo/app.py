@@ -10,6 +10,17 @@ def home():
     return "Hello Flask"
 
 
+@app.route("/time", methods=['GET'])  # 函式的裝飾 decorator:以函示為基礎 提供附加功能
+def time():
+    print('time')
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["test6"]
+    mycol = mydb["coll6"]
+    x = mycol.find()
+    response = jsonify(x[6]['time'])
+    return response
+
+
 # 函式的裝飾 decorator:以函示為基礎 提供附加功能
 @app.route("/relation_vector", methods=['GET'])
 def relation_vector():
